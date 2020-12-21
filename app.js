@@ -18,7 +18,7 @@ switch (comando) {
         break;
     case 'crear':
         crearArchivo(argv.base, argv.limite)
-            .then(archivo => console.log(`Archivo creado: ${ archivo.yellow }`))
+            .then(archivo => console.log(`Archivo creado: ${ archivo.yellow }`)) //archivo.yellow - No es recomendable porque puede existir una propiedad llamada "yellow"
             .catch(err => console.log(err));
         break;
     default:
